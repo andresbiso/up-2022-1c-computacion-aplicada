@@ -24,3 +24,30 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 # Instalar Apache
 echo -e "$Cyan \n Instalando Apache2 $Color_Off"
 sudo apt-get install apache2
+
+# Cambio los permisos de la carpeta para poder crear archivo html 
+sudo chown -hR linux:linux /var/www
+sudo chmod -R g+rw /var/www
+
+# Iniciar Apache
+sudo systemctl start apache2
+sudo systemctl status apache2
+
+# Crear pagina ejemplo
+cd /var/www/html
+touch trabajo.html
+echo '<!DOCTYPE html>
+<html>
+<head>
+<title>Computación Aplicada</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>Opinión Personal</h1>
+<p>Desde mi punto de vista la materia permite que aprendamos un montón de herramientas que nos sirven en el día a día a los que trabajamos en el área de sistemas.</p>
+</body>
+</html>' > trabajo.html 
+
+# Restart Apache
+echo -e "$Cyan \n Restarting Apache $Color_Off"
+sudo service apache2 restart
