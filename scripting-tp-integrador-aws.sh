@@ -43,8 +43,11 @@ echo '<!DOCTYPE html>
 <meta charset="UTF-8">
 </head>
 <body>
-<h1>Opinión Personal</h1>
+<h1>Opiniones Personales</h1>
+<h3>Andrés Biso</h3>
 <p>Desde mi punto de vista la materia permite que aprendamos un montón de herramientas que nos sirven en el día a día a los que trabajamos en el área de sistemas.</p>
+<h3>Lautaro Barceló</h3>
+<p>En un universo tan visual, siempre me intimidó la terminal vacía sobre fondo negro. El curso logró que pueda manejarme con cierta fluidez en Linux, además de ayudarme a comprender los procesos y aplicaciones que se pueden llevar a cabo. </p>
 </body>
 </html>' > trabajo.html 
 
