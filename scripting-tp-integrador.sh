@@ -32,6 +32,11 @@ do
 	unset REVERSA
 
 	#Invierto los caracteres de la cadena con este loop.
+	#En REVERSA voy cargando letra por letra CADENA de forma invertida. Si la palabra es "lago", funciona así:
+	#REVERSA = l + REVERSA (que arranca vacía: '')
+	#REVERSA = a + REVERSA ('l')
+	#REVERSA = g + REVERSA ('al')
+	#REVERSA = o + REVERSA ('gal')
 	for (( i = 0 ; i < ${#CADENA} ; i++ )) ; do
 		REVERSA=${CADENA:i:1}$REVERSA
 	done
@@ -57,7 +62,7 @@ do
             fi
             ;;
         4)
-            echo "Hasta luego!"
+            echo "Hasta luego $USER!"
             exit 0
             ;;
         *)
