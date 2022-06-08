@@ -48,6 +48,8 @@ echo '<!DOCTYPE html>
 <p>Desde mi punto de vista la materia permite que aprendamos un montón de herramientas que nos sirven en el día a día a los que trabajamos en el área de sistemas.</p>
 <h3>Lautaro Barceló</h3>
 <p>En un universo tan visual, siempre me intimidó la terminal vacía sobre fondo negro. El curso logró que pueda manejarme con cierta fluidez en Linux, además de ayudarme a comprender los procesos y aplicaciones que se pueden llevar a cabo. </p>
+<h3>Leonardo Boella</h3>
+<p>Es mi primer entrada seria al mundo Linux, era algo que siempre quise aprender. A modo que pequeña critica, me parece que arranco liviana y sobre el final se acumularon muchos contenidos para el final</p>
 </body>
 </html>' > trabajo.html 
 
