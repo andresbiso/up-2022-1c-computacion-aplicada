@@ -49,7 +49,7 @@ echo '<!DOCTYPE html>
 <h3>Lautaro Barceló</h3>
 <p>En un universo tan visual, siempre me intimidó la terminal vacía sobre fondo negro. El curso logró que pueda manejarme con cierta fluidez en Linux, además de ayudarme a comprender los procesos y aplicaciones que se pueden llevar a cabo. </p>
 <h3>Leonardo Boella</h3>
-<p>Esta materia fue mi primer entrada al mundo Linux. A modo que pequeña critica, me parece que arranco lento y sobre el final se acumularon muchos contenidos</p>
+<p>Esta materia fue mi primer contacto con la consola de Linux. Me gusto la forma practica como se dieron los conceptos y herramientas</p>
 </body>
 </html>' > trabajo.html 
 
