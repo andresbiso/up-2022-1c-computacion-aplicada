@@ -27,29 +27,35 @@ do
 	echo "Fin de sucesión!"
             ;;
         2)
-	echo "Escriba una cadena de caracteres"
-	read CADENA
-	unset REVERSA
+        echo "Escriba una cadena de caracteres"
+        read CADENA
+	
+        #Convierto la cadena a lowercase
+        CADENA="$(tr [A-Z] [a-z] <<< "$CADENA")"
+        
+        #Elimino los espacios, las comillas invertidas leen lo que devuelve echo
+        CADENA=`echo ${CADENA//[[:blank:]]/}`
+	
+	#Unseteo variable para después cargar cadena en reversa para comparar
+        unset REVERSA
 
-	#Invierto los caracteres de la cadena con este loop.
-	#En REVERSA voy cargando letra por letra CADENA de forma invertida. Si la palabra es "lago", funciona así:
-	#REVERSA = l + REVERSA (que arranca vacía: '')
-	#REVERSA = a + REVERSA ('l')
-	#REVERSA = g + REVERSA ('al')
-	#REVERSA = o + REVERSA ('gal')
-	for (( i = 0 ; i < ${#CADENA} ; i++ )) ; do
-		REVERSA=${CADENA:i:1}$REVERSA
-	done
+        #Invierto los caracteres de la cadena con este loop.
+        #En REVERSA voy cargando letra por letra CADENA de forma invertida. Si la palabra es ">
+        #REVERSA = l + REVERSA (que arranca vacía: '')
+        #REVERSA = a + REVERSA ('l')
+        #REVERSA = g + REVERSA ('al')
+        #REVERSA = o + REVERSA ('gal')
+        for (( i = 0 ; i < ${#CADENA} ; i++ )) ; do
+                REVERSA=${CADENA:i:1}$REVERSA
+        done
 
-	#Como se ve en este echo, los caracteres están invertidos pero aún son case sensitive.
- 
-	echo $REVERSA
+        #Como se ve en este echo, los caracteres están invertidos pero aún son case sensitive.
 
-	if [ $CADENA = $REVERSA ]; then
-		echo "La cadena ingresada es un palíndromo"
-	else
-		echo "La cadena ingresada no es un palíndromo"
-	fi
+        if [ $CADENA = $REVERSA ]; then
+                echo "La cadena ingresada es un palíndromo"
+        else
+                echo "La cadena ingresada no es un palíndromo"
+        fi
             ;;
         3)
             read -r -p "Ingrese la ruta de un archivo: " file_path
