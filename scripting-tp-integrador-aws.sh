@@ -59,17 +59,23 @@ sudo apt-get -y install postgresql
 
 # Restart Apache
 echo -e "$Cyan \n Restarting Apache $Color_Off"
-sudo service apache2 restart
+sudo systemctl restart apache2
 
 # Restart Postgresql
 echo -e "$Cyan \n Restarting Postgresql $Color_Off"
-sudo service postgresql restart
+sudo systemctl restart postgresql
 
 # Crear usuario Profesor
 sudo useradd profesor -d /home/profesor -m
 sudo echo -e "1111111\n1111111" | sudo passwd profesor 
 echo "se ha creado el usuario 'profesor' con éxito"
 
+# Configuro SSH
+sudo apt-get -y install openssh-server
+echo "AllowUsers profesor" >> /etc/ssh/sshd_config
+sudo systemctl restart sshd 
+
+# Agrego symlinks y hardlinks
 ln -s /var/www/html /home/profesor/html
 ln ./scripting-tp-integrador.sh /home/profesor/script.sh
 
