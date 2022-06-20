@@ -57,7 +57,28 @@ echo '<!DOCTYPE html>
 </body>
 </html>' > trabajo.html 
 
-cp index.html /var/www/html/index.html
+echo '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Página Principal</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página Principal">
+</head>
+<body>
+  <header>
+    <h1>¡Bienvenido!</h1>
+  </header>
+
+  <section>
+    <h2>Página Principal</h2>
+    <li><a href="trabajo.html">Ir a trabajo.html</a></li>
+  </section>
+
+</body>
+</html>' > /var/www/html/index.html
 
 sudo apt-get -y install postgresql
 
