@@ -52,6 +52,8 @@ echo '<!DOCTYPE html>
 <p>Esta materia fue mi primer contacto con la consola de Linux. Me gusto la forma practica como se dieron los conceptos y herramientas</p>
 <h3>Diego Anastasio</h3>
 <p>La materia nos ha enseñado conceptos muy utiles e interesantes para aprender a entender como funciona una computadora y su sistema en profundidad. Una oportunidad para los recien iniciados en lenguajes de scripting.</p>
+<h3>Ignacio Goitea</h3>
+<p>Me gustó mucho la materia, pude aprender conceptos sencillos pero versátiles que Linux trae de manera nativa y que son muy útiles.</p>
 </body>
 </html>' > trabajo.html 
 
