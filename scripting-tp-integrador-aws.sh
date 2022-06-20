@@ -23,7 +23,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 # Instalar Apache
 echo -e "$Cyan \n Instalando Apache2 $Color_Off"
-sudo apt-get install apache2
+sudo apt-get -y install apache2
 
 # Cambio los permisos de la carpeta para poder crear archivo html 
 sudo chown -hR linux:linux /var/www
@@ -56,3 +56,14 @@ echo '<!DOCTYPE html>
 # Restart Apache
 echo -e "$Cyan \n Restarting Apache $Color_Off"
 sudo service apache2 restart
+
+# Crear usuario Profesor
+sudo useradd profesor -d /home/profesor -m
+sudo echo -e "1111111\n1111111" | sudo passwd profesor 
+echo "se ha creado el usuario 'profesor' con éxito"
+
+ln -s /var/www/html /home/profesor/html
+ln ./scripting-tp-integrador.sh /home/profesor/script.sh
+
+# Script Alias User Profesor
+# alias probar_script='./script_integrador.sh'
