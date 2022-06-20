@@ -53,6 +53,8 @@ echo '<!DOCTYPE html>
 </body>
 </html>' > trabajo.html 
 
+cp index.html /var/www/html/index.html
+
 # Restart Apache
 echo -e "$Cyan \n Restarting Apache $Color_Off"
 sudo service apache2 restart
