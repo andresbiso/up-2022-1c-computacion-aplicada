@@ -74,4 +74,4 @@ ln -s /var/www/html /home/profesor/html
 ln ./scripting-tp-integrador.sh /home/profesor/script.sh
 
 # Script Alias User Profesor
-# alias probar_script='./script_integrador.sh'
+echo "alias probar_script='/home/profesor/script.sh'" >> /home/profesor/.bashrc
