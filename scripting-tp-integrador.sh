@@ -23,7 +23,7 @@ palindromo() {
     read CADENA
 
     #Convierto la cadena a lowercase
-    CADENA="$(tr [A-Z] [a-z] <<< "$CADENA")"
+    CADENA="${CADENA,,}"
     
     #Elimino los espacios, las comillas invertidas leen lo que devuelve echo
     CADENA=`echo ${CADENA//[[:blank:]]/}`
