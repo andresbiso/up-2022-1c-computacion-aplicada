@@ -55,9 +55,15 @@ echo '<!DOCTYPE html>
 
 cp index.html /var/www/html/index.html
 
+sudo apt-get -y install postgresql
+
 # Restart Apache
 echo -e "$Cyan \n Restarting Apache $Color_Off"
 sudo service apache2 restart
+
+# Restart Postgresql
+echo -e "$Cyan \n Restarting Postgresql $Color_Off"
+sudo service postgresql restart
 
 # Crear usuario Profesor
 sudo useradd profesor -d /home/profesor -m
