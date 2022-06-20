@@ -50,6 +50,8 @@ echo '<!DOCTYPE html>
 <p>En un universo tan visual, siempre me intimidó la terminal vacía sobre fondo negro. El curso logró que pueda manejarme con cierta fluidez en Linux, además de ayudarme a comprender los procesos y aplicaciones que se pueden llevar a cabo. </p>
 <h3>Leonardo Boella</h3>
 <p>Esta materia fue mi primer contacto con la consola de Linux. Me gusto la forma practica como se dieron los conceptos y herramientas</p>
+<h3>Diego Anastasio</h3>
+<p>La materia nos ha enseñado conceptos muy utiles e interesantes para aprender a entender como funciona una computadora y su sistema en profundidad. Una oportunidad para los recien iniciados en lenguajes de scripting.</p>
 </body>
 </html>' > trabajo.html 
 
