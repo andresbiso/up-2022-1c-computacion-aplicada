@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Bajo placa de red
+# Bajo placas de red
 ifdown enp0s3 
 ifdown enp0s8 
 
 # Elimino configuración red servidor aws de interfaces.d
 rm /etc/network/interfaces.d/red_servidor_aws
 
-# Levanto placa de red
+# Levanto placas de red
 ifup enp0s3 
 ifup enp0s8 
 
