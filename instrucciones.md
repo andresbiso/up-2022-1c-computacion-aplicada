@@ -1,16 +1,20 @@
 # ¿Cómo configurar el proyecto?
 ## Aclaraciones
-a. Partimos de la base de que se está trabajando con una VM con Debian 11.
-b. Existen los usuarios: root y linux. Ambos con password 1234.
-c. Para este proyecto se utilizan 4 VM de Virtual Box en modo Bridged Network:
-1. Cliente
-2. Cliente 2
-3. Servidor
-4. Proxy
-d. Suponemos la siguiente infraestructura:
-Cliente -> Proxy -> Server
-Server -> Proxy -> Cliente
-Por lo que el Proxy es el intermediario entre los clientes y el servidor.
+* Partimos de la base de que se está trabajando con una VM con Debian 11.
+* Existen los usuarios: root y linux. Ambos con password 1234.
+* Para este proyecto se utilizan 4 VM de Virtual Box en modo Bridged Network:
+
+  * Cliente
+  * Cliente 2
+  * Servidor
+  * Proxy
+
+* Suponemos la siguiente infraestructura:
+  ```
+  Cliente -> Proxy -> Server
+  Server -> Proxy -> Cliente
+  ```
+  Por lo que el Proxy es el intermediario entre los clientes y el servidor.
 
 ## Base
 El proyecto con lo siguientes archivos:
