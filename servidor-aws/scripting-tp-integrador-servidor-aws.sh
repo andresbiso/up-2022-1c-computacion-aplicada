@@ -100,7 +100,7 @@ echo -e "$Cyan \n Se ha creado el usuario profesor con éxito $Color_Off"
 # Configuro SSH
 echo -e "$Cyan \n Instalando y configurando ssh $Color_Off"
 sudo apt-get -y install openssh-server
-echo "AllowUsers profesor" >> /etc/ssh/sshd_config
+echo "AllowUsers linux profesor" >> /etc/ssh/sshd_config
 sudo systemctl restart ssh.service 
 
 # Agrego symlinks y hardlinks
