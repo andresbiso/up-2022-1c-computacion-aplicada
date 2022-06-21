@@ -93,7 +93,7 @@ sudo systemctl restart postgresql
 
 # Crear usuario Profesor
 echo -e "$Cyan \n Creando usuario profesor $Color_Off"
-sudo useradd profesor -d /home/profesor -m
+sudo useradd profesor -s /bin/bash -d /home/profesor -m
 sudo echo -e "1111111\n1111111" | sudo passwd profesor 
 echo -e "$Cyan \n Se ha creado el usuario profesor con éxito $Color_Off"
 
