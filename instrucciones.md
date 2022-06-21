@@ -2,19 +2,33 @@
 ## Aclaraciones
 * Partimos de la base de que se está trabajando con una VM con Debian 11.
 * Existen los usuarios: root y linux. Ambos con password 1234.
-* Para este proyecto se utilizan 4 VM de Virtual Box en modo Bridged Network:
-
+* Para este proyecto se utilizan 4 VM de Virtual Box:
   * Cliente
   * Cliente 2
   * Servidor
   * Proxy
-
 * Suponemos la siguiente infraestructura:
   ```
   Cliente -> Proxy -> Server
   Server -> Proxy -> Cliente
   ```
   Por lo que el Proxy es el intermediario entre los clientes y el servidor.
+* Cada VM tiene configurada dos placas de red:
+  * Adapter 1: NAT
+  * Adapter 2: Host-Only
+* Para configurar el Host-Only, se va a la sección de Host Network Manager y se crea una VirtualBox Host-Only Ethernet Adapter con la siguiente configuración:
+```
+# Adapter Tab
+IPv4 Addres: 192.168.1.1
+IPv4 Network Mask: 255.255.255.0
+
+# DHCP Server Tab
+Enable Server: Checked
+Server Address: 192.168.1.100
+Server Mask: 255.255.255.0
+Lower Address Bound: 192.168.1.2
+Upper Address Bound: 192.168.1.99
+```
 
 ## Estructura del Proyecto
 ```
