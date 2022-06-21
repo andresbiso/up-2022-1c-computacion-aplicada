@@ -14,6 +14,7 @@ Por lo que el Proxy es el intermediario entre los clientes y el servidor.
 
 ## Base
 El proyecto con lo siguientes archivos:
+```
 /
 |- cliente/
 |-- red_cliente -> configuración de placa de interfaz de red para cliente
@@ -38,3 +39,4 @@ El proyecto con lo siguientes archivos:
 |-- script-iniciar-server-aws.sh -> script que configura placa de interfaz de red del servidor aws
 |-- script-reset-server-aws.sh -> script que vuelve VM a estado inicial previo a script-iniciar-server-aws.sh y scripting-tp-integrador-servidor-aws.sh.
 |- script-install-base.sh -> script que instala los paquetes base para poder correr el proyecto en todas las VM y agrega el usuario linux a archivo sudoers.
+```
