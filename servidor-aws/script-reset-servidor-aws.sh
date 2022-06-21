@@ -1,2 +1,10 @@
 #!/bin/bash
-# Este script tiene como objetivo reiniciar el entorno para poder volver a correr el script creado para AWS
+
+# Bajo placa de red
+ifdown enp0s3 
+
+# Elimino configuración red servidor aws de interfaces.d
+rm /etc/network/interfaces.d/red_servidor_aws
+
+# Levanto placa de red
+ifup enp0s3 
