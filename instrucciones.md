@@ -50,21 +50,23 @@
 * Servidor -> [red_servidor_aws](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/servidor-aws/red_servidor_aws)
 * Proxy -> [red_proxy](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/proxy/red_proxy)
 
-## Paso General
+
+## Scripts de Configuración de Ambiente
+* Todos los scripts a continuación deben ejecutarse con: `sudo [nombre_script]` (para que corran como superusuario)
+
+### General
 * Correr el siguiente script para configurar todas las VM con las herramientas necesarias para levatar los distintos proyecto.
 [script-install-base.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/script-install-base.sh)
 
-## Cliente
+### Cliente
 * Correr script: [script-iniciar-cliente.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/cliente/script-iniciar-cliente.sh)
 
-## Cliente 2
+### Cliente 2
 * Correr script: [script-iniciar-cliente-2.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/cliente/script-iniciar-cliente-2.sh)
 
-## Servidor
+### Servidor
 * Primero correr script: [script-iniciar-servidor-aws.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/servidor-aws/script-iniciar-servidor-aws.sh)
-* Segundo correr script: [scripting-tp-integrador-servidor-aws.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/servidor-aws/scripting-tp-integrador-servidor-aws.sh)
+* Segundo correr script: [scripting-tp-integrador-servidor-aws.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/servidor-aws/scripting-tp-integrador-servidor-aws.sh) 
 
-  * Este script debe correrse con: sudo . [nombre_script] (para que corra en la sesión actual y no en un fork de bash)
-
-## Proxy
+### Proxy
 - Correr script: [script-iniciar-proxy.sh](https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/proxy/script-iniciar-proxy.sh)
