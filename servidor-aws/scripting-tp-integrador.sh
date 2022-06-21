@@ -1,22 +1,24 @@
 #!/bin/bash
 
+#Se trata de una secuencia infinita de números naturales; a partir del 0 y el 1, se van sumando a pares, 
+#de manera que cada número es igual a la suma de sus dos anteriores
 fibonacci() {
-	#Declaro las 3 variables en mayúscula, siguiendo la convención de bash.
 	NUM1=0
 	NUM2=1
 	SUM=0
 	echo "Ingrese un número entero con la cantidad de números de la sucesión de Fibonacci que desea ver"
 	read NUM3
-    	echo
+    	echo 
 	for (( i = 1 ; i <= NUM3 ; i++ )); do
         	echo $SUM
-		let NUM1=$NUM2
-		let NUM2=$SUM
+		NUM1=$NUM2
+		NUM2=$SUM
 		SUM=$((NUM1+NUM2))
 	done
 	echo "Fin de sucesión!"
 }
 
+# Palabra o expresión que es igual si se lee de izquierda a derecha que de derecha a izquierda.
 palindromo() {
 
     echo "Escriba una cadena de caracteres"
