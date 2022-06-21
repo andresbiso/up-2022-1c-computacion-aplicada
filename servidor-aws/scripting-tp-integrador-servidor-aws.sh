@@ -6,6 +6,9 @@
 # corriendo Debian GNU/Linux 11
 ###
 
+# Sesión no interactiva
+DEBIAN_FRONTEND=noninteractive
+
 # Colores
 # Reset
 Color_Off='\033[0m' # Text Reset
@@ -26,16 +29,12 @@ echo -e "$Cyan \n Instalando Apache2 $Color_Off"
 sudo apt-get -y install apache2
 
 # Cambio los permisos de la carpeta para poder crear archivo html 
+echo -e "$Cyan \n Cambiando permisos de /var/www $Color_Off"
 sudo chown -hR linux:linux /var/www
 sudo chmod -R g+rw /var/www
 
-# Iniciar Apache
-sudo systemctl start apache2
-sudo systemctl status apache2
-
 # Crear pagina ejemplo
-cd /var/www/html
-touch trabajo.html
+echo -e "$Cyan \n Creando página de ejemplo $Color_Off"
 echo '<!DOCTYPE html>
 <html>
 <head>
@@ -55,8 +54,9 @@ echo '<!DOCTYPE html>
 <h3>Ignacio Goitea</h3>
 <p>Me gustó mucho la materia, pude aprender conceptos sencillos pero versátiles que Linux trae de manera nativa y que son muy útiles.</p>
 </body>
-</html>' > trabajo.html 
+</html>' > /var/www/html/trabajo.html 
 
+echo -e "$Cyan \n Creando homepage $Color_Off"
 echo '
 <!DOCTYPE html>
 <html lang="en">
@@ -80,6 +80,7 @@ echo '
 </body>
 </html>' > /var/www/html/index.html
 
+echo -e "$Cyan \n Instalando postgresql $Color_Off"
 sudo apt-get -y install postgresql
 
 # Restart Apache
@@ -91,18 +92,22 @@ echo -e "$Cyan \n Restarting Postgresql $Color_Off"
 sudo systemctl restart postgresql
 
 # Crear usuario Profesor
+echo -e "$Cyan \n Creando usuario profesor $Color_Off"
 sudo useradd profesor -d /home/profesor -m
 sudo echo -e "1111111\n1111111" | sudo passwd profesor 
-echo "se ha creado el usuario 'profesor' con éxito"
+echo -e "$Cyan \n Se ha creado el usuario profesor con éxito $Color_Off"
 
 # Configuro SSH
+echo -e "$Cyan \n Instalando y configurando ssh $Color_Off"
 sudo apt-get -y install openssh-server
 echo "AllowUsers profesor" >> /etc/ssh/sshd_config
-sudo systemctl restart sshd 
+sudo systemctl restart ssh.service 
 
 # Agrego symlinks y hardlinks
-ln -s /var/www/html /home/profesor/html
-ln ./scripting-tp-integrador.sh /home/profesor/script.sh
+echo -e "$Cyan \n Creando symlink y hardlinks para usuario profesor $Color_Off"
+ln -sf /var/www/html /home/profesor/html
+ln -f scripting-tp-integrador.sh /home/profesor/script.sh
 
 # Script Alias User Profesor
+echo -e "$Cyan \n Creando bash alias para usuario profesor $Color_Off"
 echo "alias probar_script='/home/profesor/script.sh'" >> /home/profesor/.bashrc
