@@ -1,5 +1,8 @@
-auto enp0s3
-iface enp0s3 inet static
+auto enp0s8
+iface enp0s8 inet static
 address 192.168.1.11
 netmask 255.255.255.0
 gateway 192.168.1.55
+
+auto enp0s3
+iface enp0s3 inet dhcp
