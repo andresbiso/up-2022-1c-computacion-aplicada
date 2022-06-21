@@ -18,12 +18,12 @@ killall -9 -u profesor
 deluser --remove-home profesor
 
 # Borrar ssh-server
-sudo apt purge openssh-server
+sudo apt -y purge openssh-server
 rm -rf /etc/ssh
 
 # Borrar postgresql
-sudo apt purge postgresql
+sudo apt -y purge postgresql
 
 # Borrar apache2
-sudo apt purge apache2
+sudo apt -y purge apache2
 rm -rf /var/www
