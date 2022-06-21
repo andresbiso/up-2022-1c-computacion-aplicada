@@ -43,3 +43,9 @@
 |-- script-reset-server-aws.sh -> script que vuelve VM a estado inicial previo a script-iniciar-server-aws.sh y scripting-tp-integrador-servidor-aws.sh.
 |- script-install-base.sh -> script que instala los paquetes base para poder correr el proyecto en todas las VM y agrega el usuario linux a archivo sudoers.
 ```
+
+## Configuraciones Placa de Intefáz de Red
+* Cliente -> https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/cliente/red_cliente
+* Cliente 2 -> https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/cliente/red_cliente_2
+* Servidor -> https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/servidor-aws/red_servidor_aws
+* Proxy -> https://github.com/andresbiso/up-2022-1c-computacion-aplicada/blob/main/proxy/red_proxy
