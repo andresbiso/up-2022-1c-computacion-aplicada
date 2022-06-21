@@ -1,7 +1,3 @@
-# Este archivo se debe agregar al directorio /etc/network/interfaces.d
-# El mismo contiene la configuración de la placa de red
-# En este caso estamos definiendo para la placa de red enp0s3 que posea IP estática y la máscara y el Gateway pedidos en el TP
-
 auto enp0s3
 iface enp0s3 inet static
 address 192.168.1.55
