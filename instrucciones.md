@@ -40,6 +40,7 @@ Upper Address Bound: 192.168.1.99
 |-- script-iniciar-cliente-2.sh -> script que configura placa de interfaz de red del cliente 2
 |-- script-reset-cliente.sh -> script que vuelve VM a estado inicial previo a script-iniciar-cliente.sh
 |-- script-reset-cliente-2.sh -> script que vuelve VM a estado inicial previo a script-iniciar-cliente-2.sh
+|-- script-ssh-profesor.sh -> abre una sesión interactiva de bash para que se puedan acceder a los alias
 |- proxy/
 |-- crontab_proxy -> configuración de cron para proxy (para usuario root)
 |-- dia_laboral.cfg -> configuración de iptables para día laboral
