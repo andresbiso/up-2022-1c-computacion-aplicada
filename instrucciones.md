@@ -16,8 +16,7 @@
   ```
   Por lo que el Proxy es el intermediario entre los clientes y el servidor.
 
-## Base
-El proyecto con lo siguientes archivos:
+## Estructura del Proyecto
 ```
 /
 |- cliente/
