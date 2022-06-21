@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# Bajo placa de red
+# Bajo placas de red
 ifdown enp0s3 
+ifdown enp0s8
 
 # Elimino configuración red cliente de interfaces.d
 rm /etc/network/interfaces.d/red_cliente_2
 
-# Levanto placa de red
+# Levanto placas de red
 ifup enp0s3 
+ifup enp0s8
