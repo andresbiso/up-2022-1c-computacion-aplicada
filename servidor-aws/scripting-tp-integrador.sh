@@ -1,5 +1,32 @@
 #!/bin/bash
 
+#Obtiene un número para Fibonacci
+get_num() {
+    read NUM3;
+    #Expresión regular para comparar
+    re='^[0-9]+$'
+    #Chequea si se ha ingresado un número con =~ que es el operador para matchear expresiones regulares con texto    
+    if ! [[ $NUM3 =~ $re ]] ; then
+        echo "Error: usted no ha ingresado un número, pruebe nuevamente" 
+        get_num
+    else
+    return 0
+    fi
+}
+
+#Obtiene una cadena para Palíndromo
+get_cadena() {
+    read CADENA
+    #Chequea si la cadena está vacía
+    if [ -z "$CADENA"  ]; then
+        echo "Usted no ingresó ninguna cadena, intente nuevamente."
+        get_cadena
+    else
+    return 0
+    fi
+}
+
+
 #Se trata de una secuencia infinita de números naturales; a partir del 0 y el 1, se van sumando a pares, 
 #de manera que cada número es igual a la suma de sus dos anteriores
 fibonacci() {
@@ -7,8 +34,9 @@ fibonacci() {
 	NUM2=1
 	SUM=0
 	echo "Ingrese un número entero con la cantidad de números de la sucesión de Fibonacci que desea ver"
-	read NUM3
-    	echo 
+	#OBTENGO NUM3
+    get_num
+    echo 
 	for (( i = 1 ; i <= NUM3 ; i++ )); do
         	echo $SUM
 		NUM1=$NUM2
@@ -22,7 +50,8 @@ fibonacci() {
 palindromo() {
 
     echo "Escriba una cadena de caracteres"
-    read CADENA
+    #Obtengo CADENA
+    get_cadena
 
     #Convierto la cadena a lowercase
     CADENA="${CADENA,,}"
